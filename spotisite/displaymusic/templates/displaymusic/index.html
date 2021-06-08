@@ -1,0 +1,10 @@
+displaymusic/templates/displaymusic/index.html
+{% if latest_song_list %}
+    <ul>
+    {% for song in latest_song_list %}
+        <li><a href="/polls/{{ song.id }}/">{{ song.song_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No songs are available.</p>
+{% endif %}
